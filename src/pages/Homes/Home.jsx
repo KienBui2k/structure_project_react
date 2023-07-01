@@ -1,18 +1,22 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {counterActions} from '@stores/slices/counter.slice'
+import Banner from './components/Banners/Banner'
+import Introduce from './components/Introduces/Introduce'
 
 export default function Home() {
-  const dispatch = useDispatch();
-  const counterStore = useSelector(store => store.counterStore);
+  // const dispatch = useDispatch();
+  // const counterStore = useSelector(store => store.counterStore);
 
-  useEffect(() => {
-    console.log("counterStore", counterStore)
-  }, [])
+  // useEffect(() => {
+  //   console.log("counterStore", counterStore)
+  // }, [])
   return (
     <div>
       <h1>Home</h1>
-      <p>Counter: {counterStore.counter}</p>
+      <Banner />
+      <Introduce />
+      {/* <p>Counter: {counterStore.counter}</p>
       <button onClick={() => {
         dispatch(
           counterActions.increment()
@@ -34,7 +38,7 @@ export default function Home() {
             }
           )
         )
-      }}>Restet Counter</button>
+      }}>Restet Counter</button> */}
     </div>
   )
 }

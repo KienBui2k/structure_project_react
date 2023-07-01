@@ -5,19 +5,19 @@ import {counterActions} from '@stores/slices/counter.slice'
 import Loading from '@components/Loadings/Loading'
 import UserForm from '@components/UserForms/UserForm'
 export default function About() {
-  const dispatch = useDispatch();
-  const counterStore = useSelector(store => store.counterStore)
+  // const dispatch = useDispatch();
+  // const counterStore = useSelector(store => store.counterStore)
 
-  useEffect(() => {
-    dispatch(counterActions.findAllUsers())
-  }, [])
+  // useEffect(() => {
+  //   dispatch(counterActions.findAllUsers())
+  // }, [])
 
   // điều khiển user form
-  const [showUserForm, setShowUserForm] = useState(false);
-  const [dataForm, setDataForm] = useState(null);
+  // const [showUserForm, setShowUserForm] = useState(false);
+  // const [dataForm, setDataForm] = useState(null);
   return (
     <div>
-      {
+      {/* {
         counterStore.loading ? <Loading/> : <></>
       }
       {
@@ -65,7 +65,7 @@ export default function About() {
         )
       }
       <br></br>
-      <Outlet></Outlet>
+      <Outlet></Outlet> */}
     </div>
   )
 }
